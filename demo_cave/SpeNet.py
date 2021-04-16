@@ -44,9 +44,9 @@ class BCR(nn.Module):
         if RELU:
             if BN:
                 # self.Bn = nn.BatchNorm2d(num_features=cin)
-                # self.Bn = My_Bn()
+                self.Bn = My_Bn()
                 self.Module = nn.Sequential(
-                    # self.Bn,
+                    self.Bn,
                     self.conv,
                     self.relu
                 )
@@ -58,9 +58,9 @@ class BCR(nn.Module):
         else:
             if BN:
                 # self.Bn = nn.BatchNorm2d(num_features=cin)
-                # self.Bn = My_Bn()
+                self.Bn = My_Bn()
                 self.Module = nn.Sequential(
-                    # self.Bn,
+                    self.Bn,
                     self.conv,
                 )
             else:
